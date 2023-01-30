@@ -34,4 +34,3 @@ while x != 20:
         a = 0
     if x == 20:
         print(Fore.GREEN + '\n\nAccess Granted!')
-h
