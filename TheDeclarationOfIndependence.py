@@ -56,12 +56,19 @@ def gas_level_alert():
         print("The closest gas station is", list_of_gas_stations(), "which is", miles_to_gas_station_low, "miles away")
         
     elif gas_level_indicator == "Quarter Tank":
-        print("Gas tank is only a quarter full.")
+        print("***Warning***")
+        sleep(1)
+        print("Gas tank is only a quarter full and the closest gas station is", list_of_gas_stations(), "which is", miles_to_gas_station_quarter, "miles away.")
+
+    elif gas_level_indicator == 'Half Tank':
+        print("Gas Tank is only Half Full. You have enough fuel to make it to your destination.")
+
+    elif gas_level_indicator == "Three Quarter Tank":
+        print("Gas tank is Three Quarters Full. You have enough fuel to make it to your destination.")
+
+    else:
+        print("Gas tank is Full. You have enough fuel to make it to your destination.")
 
 
 gas_level_alert()
-
-
-
-
 
