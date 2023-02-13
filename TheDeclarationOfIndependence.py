@@ -22,7 +22,7 @@ sleep(2)
 x = 0
 a = 0
 
-while x != 20:
+while x != 9:
     x += 1
     b = (Fore.BLUE + "InfoTech Center 4.0 OS is Loading" + "." * a)
     a = a + 1
@@ -104,11 +104,12 @@ def gas_level_alert():
         print("Gas tank is Full. You have enough fuel to make it to your destination.")
 
 
-gas_level_alert()
 
 # Programmer: Matthew Clifford
 # Date: 2.8.23
 # Program: Weather System Updates
+
+
 
 # Create weather conditions in a list and choose it randomly
 def weather():
@@ -122,7 +123,7 @@ weather_alert = weather()
 
 
 # VRS() to respond to the weather condition
-def vehichle_response_system():
+def vehicle_response_system():
     if weather_alert == "Snowing":
         print("\nNWS has changed your alarm by 15 minutes because of the weather forcast:", weather_alert + ".")
         print("VRS has been engaged only allowing your vehicle to go 45 MPH.")
@@ -148,5 +149,9 @@ def vehichle_response_system():
         print("\nNWS is calling for some", weather_alert + "skies. Dirve salfely and have a wonderful day!")
 
 
-vehichle_response_system()
+# Call Function Here
+
+vehicle_response_system()
+gas_level_alert()
+
 
