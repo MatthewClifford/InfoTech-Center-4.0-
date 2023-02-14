@@ -32,7 +32,7 @@ while x != 9:
     time.sleep(0.5)
     if a == 4:
         a = 0
-    if x == 20:
+    if x == 9:
         print(Fore.GREEN + '\n\nAccess Granted!\n')
         sleep(2)
 
@@ -78,30 +78,30 @@ def gas_level_alert():
     miles_to_gas_station_quarter = round(random.uniform(26, 50), 2)
 
     if gas_level_indicator == "Empty":
-        print("***WARNING YOU ARE ON EMPTY ***")
+        print("***\nWARNING YOU ARE ON EMPTY ***")
         sleep(1)
-        print("Calling Emergency Contact")
+        print("\nCalling Emergency Contact")
 
     elif gas_level_indicator == "Low":
-        print("***Warning***")
+        print("\n***Warning***")
         sleep(1)
-        print("Gas tank is very low, checking Google Maps for the closest gas station.")
+        print("\nGas tank is very low, checking Google Maps for the closest gas station.")
         sleep(1)
-        print("The closest gas station is", list_of_gas_stations(), "which is", miles_to_gas_station_low, "miles away")
+        print("\nThe closest gas station is", list_of_gas_stations(), "which is", miles_to_gas_station_low, "miles away")
         
     elif gas_level_indicator == "Quarter Tank":
-        print("***Warning***")
+        print("\n***Warning***")
         sleep(1)
-        print("Gas tank is only a quarter full and the closest gas station is", list_of_gas_stations(), "which is", miles_to_gas_station_quarter, "miles away.")
+        print("\nGas tank is only a quarter full and the closest gas station is", list_of_gas_stations(), "which is", miles_to_gas_station_quarter, "miles away.")
 
     elif gas_level_indicator == 'Half Tank':
-        print("Gas Tank is only Half Full. You have enough fuel to make it to your destination.")
+        print("\nGas Tank is only Half Full. You have enough fuel to make it to your destination.")
 
     elif gas_level_indicator == "Three Quarter Tank":
-        print("Gas tank is Three Quarters Full. You have enough fuel to make it to your destination.")
+        print("\nGas tank is Three Quarters Full. You have enough fuel to make it to your destination.")
 
     else:
-        print("Gas tank is Full. You have enough fuel to make it to your destination.")
+        print("\nGas tank is Full. You have enough fuel to make it to your destination.")
 
 
 
@@ -126,32 +126,66 @@ weather_alert = weather()
 def vehicle_response_system():
     if weather_alert == "Snowing":
         print("\nNWS has changed your alarm by 15 minutes because of the weather forcast:", weather_alert + ".")
-        print("VRS has been engaged only allowing your vehicle to go 45 MPH.")
+        print("\nVRS has been engaged only allowing your vehicle to go 45 MPH.")
 
     elif weather_alert == "Blizzard":
         print("\nNWS has changed your alarm by 30 minutes because of the weather forcast:", weather_alert + ".")
-        print("VRS has been engaged only allowing your vehicle to go 35 MPH.")
+        print("\nVRS has been engaged only allowing your vehicle to go 35 MPH.")
 
     elif weather_alert == "Rain":
         print("\nNWS is calling for", weather_alert + ", please drive with caution.")
 
     elif weather_alert == "Foggy":
-        print("\nNWS is calling for", weather_alert + "conditions, please drive with caution.")
+        print("\nNWS is calling for", weather_alert + " conditions, please drive with caution.")
 
     elif weather_alert == "Windy":
-        print("\nNWS is calling for", weather_alert + "conditions, please drive with caution.")
+        print("\nNWS is calling for", weather_alert + " conditions, please drive with caution.")
 
     elif weather_alert == "Icy":
-        print("\nNWS is calling for", weather_alert + "conditions, please drive with caution")
-        print("VRS has been engaged only allowing your vehicle to go 25 MPH.")
+        print("\nNWS is calling for", weather_alert + " conditions, please drive with caution")
+        print("\nVRS has been engaged only allowing your vehicle to go 25 MPH.")
 
     else:
         print("\nNWS is calling for some", weather_alert + "skies. Dirve salfely and have a wonderful day!")
 
+# Checking NWS
+sleep(2)
 
-# Call Function Here
+x = 0
+a = 0
 
-vehicle_response_system()
-gas_level_alert()
+while x != 9:
+    x += 1
+    b = (Fore.BLUE + "Checking NWS for weather conditions" + "." * a)
+    a = a + 1
+# so `b` is printed on top of the previous line.
+    sys.stdout.write('\r'+b)
+
+    time.sleep(0.5)
+    if a == 4:
+        a = 0
+    if x == 9:
+        vehicle_response_system()
+        sleep(2)
+
+# Checking Gas Level
+sleep(2)
+
+x = 0
+a = 0
+
+while x != 9:
+    x += 1
+    b = (Fore.BLUE + "Checking Current Gas Level" + "." * a)
+    a = a + 1
+# so `b` is printed on top of the previous line.
+    sys.stdout.write('\r'+b)
+
+    time.sleep(0.5)
+    if a == 4:
+        a = 0
+    if x == 9:
+        gas_level_alert()
+        sleep(2)
 
 
