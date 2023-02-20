@@ -312,9 +312,7 @@ def movie_themes():
   2. Star Wars
   3. Indiana Jones
   4. Pirates of the Caribbean
-  5. Marvel
-  6. Harry Potter
-  
+ 
   Hit the 'x' key and enter to stop the song...
   """)
 
