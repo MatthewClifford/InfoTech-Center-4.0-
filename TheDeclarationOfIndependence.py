@@ -5,12 +5,6 @@ from pygame import mixer
 pygame.init()
 mixer.init()
 
-"""
-american pie
-Across the Universe
-FLight of the bumble bee
-"""
-
 # Stop song
 def stop_song():
     stop_song = input("> ")
@@ -22,19 +16,6 @@ def stop_song():
 # Movie Themes
 def jurassic_park():
     mixer.music.load("Jurassic Park theme song..ogg")
-    mixer.music.set_volume(1)
-    mixer.music.play()
-    stop_song()
-
-
-def harry_potter():
-    mixer.music.load("")
-    mixer.music.set_volume(1)
-    mixer.music.play()
-    stop_song()
-
-def marvel():
-    mixer.music.load("")
     mixer.music.set_volume(1)
     mixer.music.play()
     stop_song()
@@ -72,12 +53,6 @@ def more_than_a_feeling():
 
 def thunderstruck():
     mixer.music.load("ACDC  Thunderstruck.mp3")
-    mixer.music.set_volume(1)
-    mixer.music.play()
-    stop_song()
-
-def american_pie():
-    mixer.music.load("")
     mixer.music.set_volume(1)
     mixer.music.play()
     stop_song()
